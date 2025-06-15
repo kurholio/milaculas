@@ -15,7 +15,7 @@ import com.milaculas.data.ZZTradePrediction;
 
 public class OpenAIPredictor {
 	  private static final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-	  private static final String OPENAI_API_KEY = "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";
+	  private static final String OPENAI_AK = "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";
 	  private static final ObjectMapper mapper = new ObjectMapper();
 
 	
@@ -40,7 +40,7 @@ public class OpenAIPredictor {
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(URI.create(OPENAI_API_URL))
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + OPENAI_API_KEY)
+                .header("Authorization", "Bearer " + OPENAI_AK)
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .build();
 
